@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- Bootstrap CSS -->
+    {{ bootstrap.load_css() }}
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="/">Lab — Flask, Part 2</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-item nav-link active" href="/">Home</a>
+          <a class="nav-item nav-link" href="/page2">Page 2</a>
+          <a class="nav-item nav-link" href="/page3">Page 3</a>
+        </div>
+      </div>
+    </nav>
+    <!-- Your page content -->
+    <div class="container">
+      
+      <div class="card">
+        <div class="card-header">
+          Quote
+        </div>
+        <div class="card-body">
+          <blockquote class="blockquote mb-0">
+            <p>“Expectation. That is the true soul of art. If you can give a man more than he expects, then he will laud you his entire life. If you can create an air of anticipation and feed it properly, you will succeed.”
+            </p>
+            <footer class="blockquote-footer">Brandon Sanderson,<cite title="Source Title"> Words of Radiance</cite></footer>
+          </blockquote>
+        </div>
+      </div>
+    </div>
+    <!-- Optional JavaScript -->
+    {{ bootstrap.load_js() }}
+  </body>
+</html>

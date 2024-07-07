@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- Bootstrap CSS -->
+    {{ bootstrap.load_css() }}
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="/">Lab — Flask, Part 2</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-item nav-link active" href="/"
+            >Home </a
+          >
+          <a class="nav-item nav-link" href="/page2">Page 2</a>
+          <a class="nav-item nav-link" href="/page3">Page 3</a>
+        </div>
+      </div>
+    </nav>
+    <!-- Your page content -->
+    <div class="container">
+      <ul>
+        <h1>Flavors</h1> 
+        {% for item in my_info['flavors'] %}
+        <li>{{ item }}</li>
+        {% endfor %}
+      </ul>
+      <ul>
+        <h1>Colors</h1> 
+        {% for item in my_info['colors'] %}
+        <li>{{ item }}</li>
+        {% endfor %}
+      </ul>
+    </div>
+    <!-- Optional JavaScript -->
+    {{ bootstrap.load_js() }}
+  </body>
+</html>
